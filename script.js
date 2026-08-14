@@ -9,7 +9,7 @@ for(let i=0; i<256; i++){
         // reset the color after a short delay 
         setTimeout(() => {      
             grid.style.backgroundColor="";
-        }, 500);
+        }, 600);
     });
 }
 

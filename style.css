@@ -2,6 +2,13 @@
     box-sizing: border-box;
 }
 
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
 /* MADE THE GRID 640x640 SO IT APPEARS LARGE ENOUGH */
 #container{
     width: 960px;
@@ -15,4 +22,12 @@
     width: 60px;
     height: 60px;
     border: 1px solid black;
+}
+
+#sketch{
+    width: 100px;
+    height: 30px;
+    margin-bottom: 10px;
+    padding: 0;
+    background-color: #53a8b6;
 }
