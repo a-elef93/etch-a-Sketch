@@ -20,10 +20,18 @@ function drawGrid(squares){
         grid.style.width = container.clientWidth / squares + "px";
         grid.style.height = container.clientHeight /squares + "px";
         container.appendChild(grid);
+        //counter of interactions of each block
+        let interactions= 0 ;
         grid.addEventListener("mouseover",() => {
-            const randomColor = getRandomColor();
-            grid.style.backgroundColor = randomColor;
-            grid.style.backgroundColor= randomColor;
+             if (interactions < 10) {
+                interactions++;
+            }
+            const darkness = interactions /10;
+            const r = Math.floor(Math.random() * 256 * (1 - darkness));
+            const g = Math.floor(Math.random() * 256 * (1 - darkness));
+            const b = Math.floor(Math.random() * 256 * (1 - darkness));
+            grid.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+            // grid.style.backgroundColor = randomColor;
         });
     }
 }
@@ -32,11 +40,3 @@ function drawGrid(squares){
 function resetGrid(){
     container.innerHTML = "";
 }
- //Create a random RGB Color 
-function getRandomColor() {
-    const r = Math.floor(Math.random() * 256);
-    const g = Math.floor(Math.random() * 256);
-    const b = Math.floor(Math.random() * 256);
-    return `rgb(${r}, ${g}, ${b})`;
-}
-
