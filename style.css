@@ -24,10 +24,11 @@ body{
     border: 1px solid black;
 }
 
-#sketch{
-    width: 100px;
-    height: 30px;
+#regrid{
+    width: 200px;
+    height: 40px;
     margin-bottom: 10px;
     padding: 0;
     background-color: #53a8b6;
+    font-weight: 800;
 }
