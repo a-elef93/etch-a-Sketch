@@ -6,7 +6,8 @@ for(let i=0; i<256; i++){
     container.appendChild(grid);
     grid.addEventListener("mouseover",() => {
         grid.style.backgroundColor = "#497285";
-        setTimeout(() => {
+        // reset the color after a short delay 
+        setTimeout(() => {      
             grid.style.backgroundColor="";
         }, 500);
     });

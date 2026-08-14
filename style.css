@@ -4,15 +4,15 @@
 
 /* MADE THE GRID 640x640 SO IT APPEARS LARGE ENOUGH */
 #container{
-    width: 640px;
-    height: 640px;
+    width: 960px;
+    height: 960px;
     display: flex;
     flex-wrap: wrap;
 }
 
 /* EVERY DIV IS 640/16=40PX */
 #container div{
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     border: 1px solid black;
 }
