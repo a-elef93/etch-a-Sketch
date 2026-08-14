@@ -6,7 +6,6 @@ drawGrid(16);
 btn.addEventListener("click", () =>{
     resetGrid();
     let squaresPerSide = Number(prompt("Enter the number of the squares per side (max:100)"));
-    console.log(squaresPerSide);
     while(squaresPerSide>100 || squaresPerSide<=0 || isNaN(squaresPerSide)){
         squaresPerSide = Number(prompt("Invalid value! Enter the number of the squares per side (max:100)"));
     }
@@ -31,7 +30,6 @@ function drawGrid(squares){
             const g = Math.floor(Math.random() * 256 * (1 - darkness));
             const b = Math.floor(Math.random() * 256 * (1 - darkness));
             grid.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
-            // grid.style.backgroundColor = randomColor;
         });
     }
 }

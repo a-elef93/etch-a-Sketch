@@ -11,6 +11,7 @@ Features
 * Grid squares automatically resize to fit the container
 * Input validation for grid size
 * Random RGB color squares on hover
+* Progressive darkening effect that turns a square fully black after 10 interactions
 
 Built With
 
