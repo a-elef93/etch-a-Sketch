@@ -1,12 +1,12 @@
 const container = document.querySelector("#container");
 const btn = document.querySelector("#regrid");
-const containerWidth = 960;
-const containerHeight = 960;
 
+drawGrid(16);
 btn.addEventListener("click", () =>{
     resetGrid();
     let squaresPerSide = Number(prompt("Enter the number of the squares per side (max:100)"));
-    while(squaresPerSide>100 || squaresPerSide<=0){
+    console.log(squaresPerSide);
+    while(squaresPerSide>100 || squaresPerSide<=0 || isNaN(squaresPerSide)){
         squaresPerSide = Number(prompt("Invalid value! Enter the number of the squares per side (max:100)"));
     }
     drawGrid(squaresPerSide);
@@ -15,8 +15,8 @@ btn.addEventListener("click", () =>{
 function drawGrid(squares){
     for(let i=0; i<(squares**2); i++){
         const grid = document.createElement("div");
-        grid.style.width = containerWidth / squares + "px";
-        grid.style.height = containerHeight /squares + "px";
+        grid.style.width = container.clientWidth / squares + "px";
+        grid.style.height = container.clientHeight /squares + "px";
         container.appendChild(grid);
         grid.addEventListener("mouseover",() => {
             grid.style.backgroundColor = "#53a8b6";
