@@ -10,6 +10,7 @@ Features
 * Custom grid size up to 100×100
 * Grid squares automatically resize to fit the container
 * Input validation for grid size
+* Random RGB color squares on hover
 
 Built With
 

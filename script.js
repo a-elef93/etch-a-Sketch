@@ -21,11 +21,9 @@ function drawGrid(squares){
         grid.style.height = container.clientHeight /squares + "px";
         container.appendChild(grid);
         grid.addEventListener("mouseover",() => {
-            grid.style.backgroundColor = "#53a8b6";
-            // reset the color after a short delay 
-            setTimeout(() => {      
-                grid.style.backgroundColor="";
-            }, 600);
+            const randomColor = getRandomColor();
+            grid.style.backgroundColor = randomColor;
+            grid.style.backgroundColor= randomColor;
         });
     }
 }
@@ -34,3 +32,11 @@ function drawGrid(squares){
 function resetGrid(){
     container.innerHTML = "";
 }
+ //Create a random RGB Color 
+function getRandomColor() {
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    return `rgb(${r}, ${g}, ${b})`;
+}
+
