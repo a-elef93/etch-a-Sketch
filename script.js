@@ -1,7 +1,8 @@
 const container = document.querySelector("#container");
 const btn = document.querySelector("#regrid");
-
+//Draw the initial 16x16 grid
 drawGrid(16);
+//Event for the button click
 btn.addEventListener("click", () =>{
     resetGrid();
     let squaresPerSide = Number(prompt("Enter the number of the squares per side (max:100)"));
@@ -12,6 +13,7 @@ btn.addEventListener("click", () =>{
     drawGrid(squaresPerSide);
 });
 
+//The function that creates the grid
 function drawGrid(squares){
     for(let i=0; i<(squares**2); i++){
         const grid = document.createElement("div");
@@ -28,6 +30,7 @@ function drawGrid(squares){
     }
 }
 
+//Reseting the grid so they don't conflict every time the users inputs values
 function resetGrid(){
     container.innerHTML = "";
 }
